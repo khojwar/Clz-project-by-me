@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+/* font-family: 'Handlee', cursive;  */
+
+
+/* reset classes  */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;  
+}
+
+body {
+    color: #1f2933;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+
+p {
+    font-size: 1.15rem;
+}
+
+/* utilities classes  */
+
+.container {
+    padding-inline: 20px;
+}
+
+header {
+    background: url(./img/mehmet-turgut-kirkgoz.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+nav {
+    padding-inline: 100px;
+    padding-block: 20px;
+    background-color: rgba(128, 128, 128, 0.144);
+}
+
+.nav-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Handlee', cursive;
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 30px;
+    color: white;
+}
+
+.nav-item {
+    border: 1px solid rgba(255, 255, 255, 0.226);
+    border-radius: 20px;
+    padding-inline: 20px;
+    padding-block: 5px;
+    cursor: pointer;
+    transition: all .5s ease-out;
+}
+
+.nav-item:hover {
+    border: 1px solid white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 130px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;
+    padding-block: 10px;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    gap: 10px;
+    padding-left: 10px;
+    transition: all 1s ease-out;
+  }
+
+  .dropdown-content a {
+    color: rgba(255, 255, 255, 0.795);
+    text-transform: uppercase;
+    font-size: small;
+  }
+  .dropdown-content a:hover {
+    color: rgb(255, 255, 255);
+    font-size: large;
+    transition: all .3s ease-out;
+  }
+
+  /* banner section  */
+  .banner-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+  }
+
+  .banner-cont {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.26);
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 30px;
+    border-radius: 5px;
+    padding: 20px;
+
+  }
+
+  .banner-btn {
+    background-color: #009ca1;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    border: 1px solid rgba(255, 255, 255, 0.63);
+  }
+
+  .banner-btn:hover {
+    background-color: #007a7e;
+    border: 1px solid rgba(255, 255, 255, 0.349);
+  }
+
+
+  /* map  */
+.map-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+/* best places  */
+
+.best-places-cont {
+    width: 100%;
+    height: 100vh;
+}
+
+.row-cont {
+    display: flex;
+    column-gap: calc((8%-40px)/3);
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+.cart-cont {
+    max-width: 23%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.image {
+    width: 102%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .5s ease-out;
+    /* height: auto; */
+}
+
+.cart-cont:hover .image {
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    background-color: rgba(128, 128, 128, 0.288);
+    color: white;
+    padding: 5px 20px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.cart-cont:hover .overlay{
+    height: 35%;
+}
+
+.text {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 1.5rem;
+}
+
+
+/* footer  */
+
+footer {
+    background-color: #1f2933;
+    color: rgba(255, 255, 255, 0.61);
+    
+}
+
+.footer-text {
+    font-size: .9rem;
+}
+
+.footer-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 20px;
+    column-gap: calc((8%-40)/3);
+    padding-block: 20px;
+}
+
+.f-cont {
+    width: 24%;
+}
+
+.f-cont a {
+    color: rgba(255, 255, 255, 0.61);
+    cursor: pointer;
+}
+
+.link-cont {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.contact-cont {
+    display: flex;
+    column-gap: 20px;
+}
